@@ -1,0 +1,6 @@
+﻿/****** Object:  ForeignKey [|constraint|]    Script Date: |scriptDate| ******/
+ALTER TABLE [|schema|].[|tableName|]  WITH CHECK ADD  CONSTRAINT [|constraint|] FOREIGN KEY([|primaryKey|])
+REFERENCES [|schema|].[|tableName2|] ([|foreignKey|])
+GO
+ALTER TABLE[|schema|].[|tableName|] CHECK CONSTRAINT [|constraint|]
+GO

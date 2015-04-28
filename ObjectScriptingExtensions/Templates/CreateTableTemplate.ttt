@@ -1,0 +1,14 @@
+﻿/****** Object:  Table [|schema|].[|tableName|]    Script Date: |scriptDate| ******/
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [|schema|].[|tableName|]
+(
+|columnDefinitions|
+)
+
+GO
