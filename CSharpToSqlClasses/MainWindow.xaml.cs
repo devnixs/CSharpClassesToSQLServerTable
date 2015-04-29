@@ -61,7 +61,7 @@ namespace CSharpToSqlClasses
             }
 
         }
-
+        
         public CompilerResults CompileCode(string source)
         {
             CompilerParameters parms = new CompilerParameters();
@@ -70,6 +70,9 @@ namespace CSharpToSqlClasses
             parms.GenerateInMemory = true;
             parms.IncludeDebugInformation = false;
             parms.ReferencedAssemblies.Add(@"C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ComponentModel.DataAnnotations.dll");
+            parms.ReferencedAssemblies.Add(@"System.dll");
+            parms.ReferencedAssemblies.Add(@"System.Core.dll");
+
             CodeDomProvider compiler = CSharpCodeProvider.CreateProvider("CSharp",new Dictionary<String, String>{{ "CompilerVersion","v3.5" }});
 
             return compiler.CompileAssemblyFromSource(parms, source);
